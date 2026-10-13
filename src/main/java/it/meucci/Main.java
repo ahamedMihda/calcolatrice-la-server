@@ -15,10 +15,9 @@ public class Main {
         PrintWriter out = new PrintWriter(lsocket.getOutputStream(), true);
         String testo;
 
-        do{
+        do {
             testo = in.readLine();
-            
-            if (testo == null || testo!= "exit"){
+            if (testo == null || "exit".equals(testo)) {
                 break;
             }
 
@@ -65,7 +64,8 @@ public class Main {
             } catch (NumberFormatException e) {
                 out.println("Errore: Formato dei numeri non valido");
             }
-        }while(testo!="exit");
+        } while (!"exit".equals(testo));
+
         in.close();
         out.close();
         lsocket.close();
