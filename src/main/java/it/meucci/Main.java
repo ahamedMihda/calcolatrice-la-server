@@ -18,7 +18,7 @@ public class Main {
         do{
             testo = in.readLine();
             
-            if (testo == null || testo.equalsIgnoreCase("exit")) {
+            if (testo == null || testo!= "exit"){
                 break;
             }
 
